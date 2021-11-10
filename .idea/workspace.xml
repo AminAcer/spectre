@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92b1958b-e0b0-4947-b292-44e1e8015c7a" name="Changes" comment="removed print">
+    <list default="true" id="92b1958b-e0b0-4947-b292-44e1e8015c7a" name="Changes" comment="Added&#10;- Object tracing&#10;- Detection counter hud&#10;- No detection hud&#10;- Max objects drawn 3&#10;- Now shows live feed with tracking">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spf.py" beforeDir="false" afterPath="$PROJECT_DIR$/spf.py" afterDir="false" />
@@ -75,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633828277604</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added&#10;- Object tracing&#10;- Detection counter hud&#10;- No detection hud&#10;- Max objects drawn 3&#10;- Now shows live feed with tracking">
+      <created>1633922934592</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1633922934592</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -93,6 +100,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test commit" />
     <MESSAGE value="removed print" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed print" />
+    <MESSAGE value="Added&#10;- Object tracing&#10;- Detection counter hud&#10;- No detection hud&#10;- Max objects drawn 3&#10;- Now shows live feed with tracking" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added&#10;- Object tracing&#10;- Detection counter hud&#10;- No detection hud&#10;- Max objects drawn 3&#10;- Now shows live feed with tracking" />
   </component>
 </project>
