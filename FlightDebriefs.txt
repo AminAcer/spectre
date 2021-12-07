@@ -220,7 +220,7 @@ Misdetections:            Timestamps:
 ##############################################################################
 
 Flight Debrief: Dec-07-2021 | 02:33:12 PM
-Notes: Both transmitters work even when next to eachother
+Notes: transmitters work together
 ==============================================
 Summary:
    Total flight time: 2 sec
@@ -231,6 +231,22 @@ Errors:
    Total time of excess detections: 1 sec
 ==============================================
 No misdetections or timestamps
+
+##############################################################################
+
+Flight Debrief: Dec-07-2021 | 03:08:21 PM
+Notes: testt
+==============================================
+Summary:
+   Total flight time: 45 sec
+   Total detection time: 43 sec
+----------------------------------------------
+Errors:
+   Misdetections: 1
+   Total time of excess detections: 29 sec
+==============================================
+Misdetections:            Timestamps:
+   03:09:00 PM               03:09:15 PM
 
 ##############################################################################
 

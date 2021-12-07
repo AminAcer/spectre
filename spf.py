@@ -8,17 +8,17 @@ import keyboard
 
 def main():
     winName = "PR-1 Live Feed"
-    redUpper = np.array([170, 255, 255])  # BRIGHTER
-    redLower = np.array([160, 70, 0])  # DARKER
+    #redUpper = np.array([170, 255, 255])  # BRIGHTER
+    #redLower = np.array([160, 70, 0])  # DARKER
 
-    #redUpper = np.array([190, 255, 255])  # BRIGHTER
-    #redLower = np.array([140, 150, 0])  # DARKER
+    redUpper = np.array([190, 255, 255])  # BRIGHTER
+    redLower = np.array([140, 150, 0])  # DARKER
     cap = cv2.VideoCapture(1)
-    print("Camera warming up...")
     ftime = datetime.now()
     fdate = date.today()
     ft = ftime.strftime("%I:%M:%S %p")
     fd = fdate.strftime("%b-%d-%Y")
+    print("Camera warming up...")
     time.sleep(2.0) #Let camera warm up
 
     try:
@@ -29,7 +29,7 @@ def main():
     except PermissionError:
         pass
 
-    maxb = 1  # Total number of balls on field
+    maxb = 3  # Total number of balls on field
     mainc = 0 # Duration of entire flight
     detc = 0 # Total duration of detection
     maxc = 0 # Duration of over detections
@@ -86,7 +86,8 @@ def main():
                 detc += 1
             if cnt > maxb and armed is True:
                 maxc += 1
-            hudDisp(frame, "", str(int(cnt)), (0, 0), (18, 146), (12, 65), (90, 156), armc, 2, 3.3) #Detections HUD
+                armc = (0, 100, 0)
+            hudDisp(frame, "", str(int(cnt)), (0, 0), (18, 146), (12, 65), (90, 156), armc, 2, 3.3)  # Detections HUD
         else: #Draw 0 detections hud
             hudDisp(frame, "", "0", (0, 0), (18, 146), (12, 65), (90, 156), armc, 2, 3.3) #0 Detections HUD
 
