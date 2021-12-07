@@ -1,4 +1,4 @@
 import spf as sp
 
 # sr1.LiveFeed()
-sp.detRed()
+sp.main()

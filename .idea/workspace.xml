@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92b1958b-e0b0-4947-b292-44e1e8015c7a" name="Changes" comment="New HUD&#10;Flight debrief added&#10;Arming system added" />
+    <list default="true" id="92b1958b-e0b0-4947-b292-44e1e8015c7a" name="Changes" comment="New HUD&#10;Flight debrief added&#10;Arming system added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlightDebriefs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FlightDebriefs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spf.py" beforeDir="false" afterPath="$PROJECT_DIR$/spf.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638342053180</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="New HUD&#10;Flight debrief added&#10;Arming system added">
+      <created>1638495592890</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1638495592890</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

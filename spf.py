@@ -6,7 +6,7 @@ from datetime import datetime, date
 import numpy as np
 import keyboard
 
-def detRed():
+def main():
     winName = "PR-1 Live Feed"
     redUpper = np.array([170, 255, 255])  # BRIGHTER
     redLower = np.array([160, 70, 0])  # DARKER
@@ -262,6 +262,3 @@ def liveFeed():
             break
     cap.release()
     cv2.destroyAllWindows()
-
-
-
