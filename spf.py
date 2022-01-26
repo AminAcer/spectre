@@ -60,11 +60,15 @@ def main():
         if keyboard.is_pressed('p'):
             armed = False
         if keyboard.is_pressed('space') and armed is True: # Save timestamp for detections
-            tstamp = datetime.now().strftime("%I:%M:%S %p")
-            dettime += [tstamp]
+            time.sleep(0.1)
+            if keyboard.is_pressed('space') is False:
+                tstamp = datetime.now().strftime("%I:%M:%S %p")
+                dettime += [tstamp]
         if keyboard.is_pressed('x') and armed is True: #Add to misdetections counter
-            mtime = datetime.now().strftime("%I:%M:%S %p")
-            misd += [mtime]
+            time.sleep(0.1)
+            if keyboard.is_pressed('x') is False:
+                mtime = datetime.now().strftime("%I:%M:%S %p")
+                misd += [mtime]
         if armed is False:
             armc = (0, 0, 255)
         else:
@@ -96,7 +100,7 @@ def main():
 
         now = datetime.now()
         ct = now.strftime("%I:%M:%S %p")
-        hudDisp(frame, "", str(ct), (0, 0), (20, 45), (12, 12), (208, 56), (80, 80, 80), 2, 0.9) #Time HUD
+        hudDisp(frame, "", str(ct), (0, 0), (20, 45), (12, 12), (208, 56), (30, 30, 30), 2, 0.9) #Time HUD
 
         # hudDisp(frame, "Armed", "", (20, 195), (0, 0), (12, 165), (208, 206), armc, 2, 0.9) #Arming HUD
         telemetry(frame)  # Read and display telemetry data

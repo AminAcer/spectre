@@ -250,3 +250,54 @@ Misdetections:            Timestamps:
 
 ##############################################################################
 
+Flight Debrief: Dec-07-2021 | 04:32:30 PM
+Notes: testing
+==============================================
+Summary:
+   Total flight time: 34 sec
+   Total detection time: 34 sec
+----------------------------------------------
+Errors:
+   Misdetections: 1
+   Total time of excess detections: 20 sec
+==============================================
+Misdetections:            Timestamps:
+   04:33:20 PM               04:33:32 PM
+
+##############################################################################
+
+Flight Debrief: Jan-26-2022 | 10:22:01 AM
+Notes: debounce 1
+==============================================
+Summary:
+   Total flight time: 17 sec
+   Total detection time: 16 sec
+----------------------------------------------
+Errors:
+   Misdetections: 2
+   Total time of excess detections: 14 sec
+==============================================
+Misdetections:            Timestamps:
+   10:22:20 AM               10:22:21 AM
+   10:22:23 AM                          
+
+##############################################################################
+
+Flight Debrief: Jan-26-2022 | 10:23:59 AM
+Notes: y
+==============================================
+Summary:
+   Total flight time: 13 sec
+   Total detection time: 0 sec
+----------------------------------------------
+Errors:
+   Misdetections: 3
+   Total time of excess detections: 0 sec
+==============================================
+Misdetections:
+   10:24:10 AM
+   10:24:11 AM
+   10:24:12 AM
+
+##############################################################################
+
