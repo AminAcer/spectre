@@ -301,3 +301,115 @@ Misdetections:
 
 ##############################################################################
 
+Flight Debrief: Feb-08-2022 | 04:50:21 PM
+Notes: runcam hardwire
+==============================================
+Summary:
+   Total flight time: 15 sec
+   Total detection time: 15 sec
+----------------------------------------------
+Errors:
+   Misdetections: 2
+   Total time of excess detections: 3 sec
+==============================================
+Misdetections:            Timestamps:
+   04:51:15 PM               04:51:17 PM
+   04:51:16 PM               04:51:19 PM
+
+##############################################################################
+
+Flight Debrief: Feb-17-2022 | 10:49:23 AM
+Notes: gyjuj
+==============================================
+Summary:
+   Total flight time: 1 min 7 sec
+   Total detection time: 1 min 7 sec
+----------------------------------------------
+Errors:
+   Misdetections: 2
+   Total time of excess detections: 0 sec
+==============================================
+Misdetections:            Timestamps:
+   10:50:59 AM               10:51:19 AM
+   10:51:00 AM               10:51:20 AM
+
+##############################################################################
+
+Flight Debrief: Mar-23-2022 | 02:29:45 PM
+Notes: rt
+==============================================
+Summary:
+   Total flight time: 0 sec
+   Total detection time: 0 sec
+----------------------------------------------
+Errors:
+   Misdetections: 0
+   Total time of excess detections: 0 sec
+==============================================
+No misdetections or timestamps
+
+##############################################################################
+
+Flight Debrief: Mar-23-2022 | 04:05:18 PM
+Notes: rt
+==============================================
+Summary:
+   Total flight time: 54 min 53 sec
+   Total detection time: 46 min 33 sec
+----------------------------------------------
+Errors:
+   Misdetections: 1
+   Total time of excess detections: 19 min 22 sec
+==============================================
+Misdetections:            Timestamps:
+   05:02:29 PM               05:02:33 PM
+
+##############################################################################
+
+Flight Debrief: Apr-10-2022 | 12:14:28 AM
+Notes: g
+==============================================
+Summary:
+   Total flight time: 24 sec
+   Total detection time: 12 sec
+----------------------------------------------
+Errors:
+   Misdetections: 2
+   Total time of excess detections: 7 sec
+==============================================
+Misdetections:            Timestamps:
+   12:15:38 AM               12:15:40 AM
+   12:15:39 AM               12:15:41 AM
+
+##############################################################################
+
+Flight Debrief: Apr-12-2022 | 03:07:33 PM
+Notes: g
+==============================================
+Summary:
+   Total flight time: 26 sec
+   Total detection time: 25 sec
+----------------------------------------------
+Errors:
+   Misdetections: 0
+   Total time of excess detections: 3 sec
+==============================================
+No misdetections or timestamps
+
+##############################################################################
+
+Flight Debrief: Apr-12-2022 | 03:11:29 PM
+Notes: y
+==============================================
+Summary:
+   Total flight time: 11 sec
+   Total detection time: 10 sec
+----------------------------------------------
+Errors:
+   Misdetections: 0
+   Total time of excess detections: 0 sec
+==============================================
+No misdetections or timestamps
+
+##############################################################################
+

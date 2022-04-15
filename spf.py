@@ -13,7 +13,7 @@ def main():
 
     redUpper = np.array([190, 255, 255])  # BRIGHTER
     redLower = np.array([140, 150, 0])  # DARKER
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture(1) #2
     ftime = datetime.now()
     fdate = date.today()
     ft = ftime.strftime("%I:%M:%S %p")
@@ -28,8 +28,7 @@ def main():
             f.write("NA  NA" + "\n")
     except PermissionError:
         pass
-
-    maxb = 3  # Total number of balls on field
+    maxb = 2  # Total number of balls on field
     mainc = 0 # Duration of entire flight
     detc = 0 # Total duration of detection
     maxc = 0 # Duration of over detections
@@ -39,17 +38,34 @@ def main():
 
     while True:
         ret, frame = cap.read()
-        frame = cv2.resize(frame, None, fx=2.1, fy=1.7, interpolation=cv2.INTER_AREA)
-        #frame = imutils.resize(frame, width=1100)
+        #frame = cv2.resize(frame, None, fx=1, fy=1.1, interpolation=cv2.INTER_AREA)
+        frame = cv2.resize(frame, None, fx=2.4, fy=2.1, interpolation=cv2.INTER_AREA)
+        frame = imutils.resize(frame, width=1100)
         blur = cv2.GaussianBlur(frame, (11, 11), 0)
         hsv = cv2.cvtColor(blur, cv2.COLOR_BGR2HSV)
 
         # Making masks
+        gray = cv2.cvtColor(hsv, cv2.COLOR_BGR2GRAY)
+        #gm = cv2.erode(gray, None, iterations=2)  # Removes small blobs
+        gm = cv2.dilate(gray, None, iterations=2)  # Remobes small blobs
+
         mask = cv2.inRange(hsv, redLower, redUpper)
-        # mask = cv2.erode(mask, None, iterations=2) # Removes small blobs
+        mask = cv2.erode(mask, None, iterations=2) # Removes small blobs
         mask = cv2.dilate(mask, None, iterations=2)  # Remobes small blobs
         redMask = cv2.bitwise_and(frame, frame, mask=mask)
-
+        circles = cv2.HoughCircles(gm, cv2.HOUGH_GRADIENT, 1.2, 100, minRadius=5)
+        # if circles is not None:
+        #     # convert the (x, y) coordinates and radius of the circles to integers
+        #     circles = np.round(circles[0, :]).astype("int")
+        #     cirList = []
+        #     for (x, y, r) in circles:
+        #         lst = [x,y,r]
+        #         cirList.append(lst)
+        #         print(cirList)
+        #         # draw the circle in the output image, then draw a rectangle
+        #         # corresponding to the center of the circle
+        #         #cv2.circle(frame, (x, y), r, (0, 255, 0), 4)
+        #         #cv2.rectangle(frame, (x - 5, y - 5), (x + 5, y + 5), (0, 128, 255), -1)
         # Making contours
         contr = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         contr = imutils.grab_contours(contr)
@@ -83,9 +99,11 @@ def main():
                 M = cv2.moments(c)
                 center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
                 if radius > 5:  # Only draw for contours with min radius
-                    cnt = cnt + 1
-                    cv2.circle(frame, (int(x), int(y)), int(radius), (255, 0, 0), 2)
-                    cv2.circle(frame, center, 5, (0, 255, 255), -1)
+                    # for u in range(len(cirList)):
+                    #     if abs(cirList[u][0] - int(x)) < 15:
+                            cnt = cnt + 1
+                            cv2.circle(frame, (int(x), int(y)), int(radius), (255, 0, 0), 2)
+                            cv2.circle(frame, center, 5, (0, 255, 255), -1)
             if armed is True:
                 detc += 1
             if cnt > maxb and armed is True:
@@ -255,9 +273,10 @@ def flightSum(fdate, ftime, mainc, detc, maxc, misd, dettime):
         print("Flight discarded")
 
 def liveFeed():
+    """"""
     winName = "PR-1 Live Feed"
     cv2.namedWindow(winName)
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture(2)
     while True:
         ret, frame = cap.read()
         frame = imutils.resize(frame, width=1100)
@@ -267,3 +286,6 @@ def liveFeed():
             break
     cap.release()
     cv2.destroyAllWindows()
+
+if __name__ == '__main__':
+    main()
